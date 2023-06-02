@@ -15,23 +15,25 @@ class Fish {
 const nemo = new Fish('Nemo');
 
 /********************************* Scenario 1 *********************************/
-// eat(); // ?
+ //eat(); // ? function defined globally so will be undefined
 
 
 /********************************* Scenario 2 *********************************/
-// nemo.eat = eat;
-// nemo.eat(); // ?
+ //nemo.eat = eat;
+//nemo.eat(); // ? will refer to instance object nemo and return 'nemo eats fish food'
 
 
 /********************************* Scenario 3 *********************************/
-// nemo.eat = eat;
-// eat(); // ?
+//nemo.eat = eat;
+ //eat(); // ? //setting instance object to global function and calling it. Refers to global
+ //object so will return 'undefined'.
 
 
 /********************************* Scenario 4 *********************************/
-// nemo.swim(); // ?
+ //nemo.swim(); // ? method invoked inside class and refers to the instance object 
+ //nemo
 
 
 /********************************* Scenario 5 *********************************/
-// const swim = nemo.swim;
-// swim(); // ?
+//const swim = nemo.swim;
+//swim(); // ? will return undefined'
